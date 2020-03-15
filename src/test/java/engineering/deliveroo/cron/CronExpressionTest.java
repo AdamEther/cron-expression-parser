@@ -2,7 +2,7 @@ package engineering.deliveroo.cron;
 
 import org.junit.jupiter.api.Test;
 
-import static engineering.deliveroo.cron.CronFieldType.MINUTE;
+import static engineering.deliveroo.cron.CronFieldType.*;
 import static java.util.stream.IntStream.rangeClosed;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
@@ -29,7 +29,7 @@ class CronExpressionTest {
 
     @Test
     void parseRange() {
-        CronField cronField = new CronField(CronFieldType.DAY_OF_WEEK, "1-5");
+        CronField cronField = new CronField(DAY_OF_WEEK, "1-5");
         assertValues(cronField, 1, 2, 3, 4, 5);
     }
 
@@ -53,31 +53,31 @@ class CronExpressionTest {
 
     @Test
     void parseAsteriskHours() {
-        CronField cronField = new CronField(CronFieldType.HOUR, "*");
+        CronField cronField = new CronField(HOUR, "*");
         assertValues(cronField, rangeClosed(0, 23).toArray());
     }
 
     @Test
     void parseAsteriskDayOfMonth() {
-        CronField cronField = new CronField(CronFieldType.DAY_OF_MONTH, "*");
+        CronField cronField = new CronField(DAY_OF_MONTH, "*");
         assertValues(cronField, rangeClosed(1, 31).toArray());
     }
 
     @Test
     void parseAsteriskDayOfWeek() {
-        CronField cronField = new CronField(CronFieldType.DAY_OF_WEEK, "*");
+        CronField cronField = new CronField(DAY_OF_WEEK, "*");
         assertValues(cronField, rangeClosed(0, 6).toArray());
     }
 
     @Test
     void parseAsteriskMonth() {
-        CronField cronField = new CronField(CronFieldType.MONTH, "*");
+        CronField cronField = new CronField(MONTH, "*");
         assertValues(cronField, rangeClosed(1, 12).toArray());
     }
 
     @Test
     void parseAsteriskWithIncrementMonth() {
-        CronField cronField = new CronField(CronFieldType.MONTH, "*/2");
+        CronField cronField = new CronField(MONTH, "*/2");
         assertValues(cronField, 1, 3, 5, 7, 9, 11);
     }
 
