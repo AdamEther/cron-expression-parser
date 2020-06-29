@@ -1,4 +1,4 @@
-package engineering.deliveroo.cron;
+package com.adamether.cron;
 
 public enum CronFieldType {
     MINUTE(0, 59, 60),

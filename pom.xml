@@ -29,7 +29,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>engineering.deliveroo.Main</mainClass>
+                            <mainClass>com.adamether.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

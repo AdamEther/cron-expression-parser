@@ -1,4 +1,4 @@
-package engineering.deliveroo.cron;
+package com.adamether.cron;
 
 import java.util.Arrays;
 import java.util.BitSet;

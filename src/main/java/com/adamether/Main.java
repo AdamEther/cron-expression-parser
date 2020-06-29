@@ -1,6 +1,6 @@
-package engineering.deliveroo;
+package com.adamether;
 
-import engineering.deliveroo.cron.CronExpression;
+import com.adamether.cron.CronExpression;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,8 +1,8 @@
-package engineering.deliveroo.cron;
+package com.adamether.cron;
 
 import java.util.StringJoiner;
 
-import static engineering.deliveroo.cron.CronFieldType.*;
+import static com.adamether.cron.CronFieldType.*;
 
 public class CronExpression {
     private final CronField minutes;

@@ -1,8 +1,8 @@
-package engineering.deliveroo.cron;
+package com.adamether.cron;
 
 import org.junit.jupiter.api.Test;
 
-import static engineering.deliveroo.cron.CronFieldType.*;
+import static com.adamether.cron.CronFieldType.*;
 import static java.util.stream.IntStream.rangeClosed;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
